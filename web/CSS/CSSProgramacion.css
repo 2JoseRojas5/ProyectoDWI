@@ -1,0 +1,294 @@
+/* ====================== TABLE PARA PROGRAMACION(ID RUTA) ====================== */
+.table-prog-ruta{
+    background: var(--table-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    align-content: center;
+    padding-left: 15px;
+}
+
+.table-prog-ter {
+    background: var(--table-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    width: 100%;
+    align-content: center;
+}
+
+.table-prog-progra {
+    background: var(--table-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    width: 100%;
+    align-content: center;
+}
+
+.prog-table-ruta{
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 650px;
+}
+
+.prog-table-ter {
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.prog-table-progra {
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.prog-table-ruta .enunciado, 
+.prog-table-ter .enunciado,
+.prog-table-progra .enunciado{
+    font-size: 16px;
+}
+
+.prog-table-ruta th, 
+.prog-table-ruta td,
+.prog-table-ter th, 
+.prog-table-ter td,
+.prog-table-progra th, 
+.prog-table-progra td{
+    padding: 10px 0;
+    font-size: 12px;
+    max-width: 200px;
+    align-items: center;
+}
+
+.option--header--prog-ruta {
+    background: var(--table-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 20px;
+    width: 700px;
+}
+
+.option--header--prog-ter{
+    background: var(--table-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 20px;
+    width: 100%;
+}
+
+.option--header--prog-progra{
+    background: var(--table-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 20px;
+    width: 100%;
+}
+
+.option--header--prog-ruta button, 
+.option--header--prog-ter button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-left: 15px;
+    background: var(--sidebar-color);
+    color: var(--text-color);
+    font-size: 17px;
+    border-color: var(--sidebar-color);
+    font-family: "Poetsen One", sans-serif;
+}
+
+.option--header--prog-progra button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-left: 79vh;
+    background: var(--sidebar-color);
+    color: var(--text-color);
+    font-size: 17px;
+    border-color: var(--sidebar-color);
+    font-family: "Poetsen One", sans-serif;
+}
+
+.prog-table-ruta tbody tr, 
+.prog-table-ter tbody tr, 
+.prog-table-progra tbody tr {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.search--box--prog-ruta{
+    background: var(--body-color);
+    border-radius: 15px;
+    color: var(--sidebar-color);
+    display: inline-block;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 20px;
+    width: 300px;
+}
+.search--box--prog-ter {
+    background: var(--body-color);
+    border-radius: 15px;
+    color: var(--sidebar-color);
+    display: inline-block;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 20px;
+    width: 200px;
+}
+
+.search--box--prog-progra {
+    background: var(--body-color);
+    border-radius: 15px;
+    color: var(--sidebar-color);
+    display: inline-block;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 20px;
+    width: 400px;
+}
+
+.search--box--prog-ruta input, 
+.search--box--prog-ter input {
+    background-color: transparent;
+    width: 100px;
+    padding: 10px;
+    border: 0;
+    outline: none;
+}
+
+.search--box--prog-progra input {
+    background-color: transparent;
+    width: 300px;
+    padding: 10px;
+    border: 0;
+    outline: none;
+}
+
+.search--box--prog-ruta i, 
+.search--box--prog-ter i, 
+.search--box--prog-progra i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+.search--box--prog-ruta i:hover, 
+.search--box--prog-ter i:hover, 
+.search--box--prog-progra i:hover {
+    transform: scale(1.2);
+}
+
+/* ========================= Flexbox Layout ========================= */
+.main--content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.prog-section {
+    flex: 1;
+    margin: 10px;
+}
+
+/* ========================= Popup Styles ========================= */
+.crear, 
+.guardar, 
+.crear2, 
+.guardar2, 
+.crear3, 
+.guardar3  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.crear.active, 
+.guardar.active, 
+.crear2.active, 
+.guardar2.active, 
+.crear3.active, 
+.guardar3.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.form-popup-ruta, 
+.form-popup-ter, 
+.form-popup-progra {
+    background: var(--table-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: left;
+}
+
+.form-popup-ruta h2, 
+.form-popup-ter h2, 
+.form-popup-progra h2 {
+    font-size: 20px;
+}
+
+.form-popup-ruta hr, 
+.form-popup-ter hr, 
+.form-popup-progra hr{
+    padding-bottom: 8px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.form-popup-ruta label, 
+.form-popup-ruta input, 
+.form-popup-ter label, 
+.form-popup-ter input {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+}
+
+.form-popup-ruta input[type="text"], 
+.form-popup-ruta select, 
+.form-popup-ter input[type="text"], 
+.form-popup-progra input[type="text"], 
+.form-popup-progra input[type="date"], 
+.form-popup-progra select {
+    padding: 8px 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 10px;
+}
+
+.form-popup-ruta .agregar, 
+.form-popup-ter .agregar, 
+.form-popup-progra .agregar {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background: var(--sidebar-color);
+    color: var(--text-color);
+    cursor: pointer;
+    width: 100px;
+}
+
+.close-btn, 
+.close-btn2, 
+.close-btn3 {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background: #888;
+    color: var(--text-color);
+    cursor: pointer;
+    width: 100px;
+}

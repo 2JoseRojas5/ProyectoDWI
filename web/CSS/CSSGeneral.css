@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* ============= Colores ============= */
+    --body-color: #E4E9F7;
+    --table-color: #fff;
+    --sidebar-color: #940d11;
+    --primary-color: #ffffff;
+    --text-color: #ffffff;
+
+    /* =========== Transiciones =========== */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+body {
+    height: 100vh;
+    background: var(--body-color);
+    padding: 5%;
+}
+
+/* ============= Side bar ============= */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background-color: var(--sidebar-color);
+} 
+
+/* =========== Reusable CSS =========== */
+.sidebar .text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.sidebar li {
+    margin-top: 10px;
+    list-style: none;
+    overflow: hidden;
+    align-items: center;
+}
+
+.sidebar li .icon {
+    padding: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li .icon, .sidebar li .text {
+    color: var(--text-color);
+    transition: var(--tran-02);
+}
+
+.side header {
+    position: relative;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+
+header .image-text .header-text {
+    display: flex;
+    padding-left: 20%;
+    align-items: center;
+    flex-direction: column;
+    font-size: 28px;
+}
+
+.header-text .frase {
+    font-weight:  600;
+}
+
+.header-text .empresa {
+    margin-top: -2px;
+}
+
+/* Estilos de los a */
+.sidebar li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+/* Cambio del color del fondo cuando pasa el cursor por el menú */
+.sidebar li a:hover {
+    background: var(--primary-color);
+}
+
+/* Cambio del color del icono y texto cuando pasa el cursor por el menú */
+.sidebar li a:hover .icon, .sidebar li a:hover .text {
+    color: var(--sidebar-color);
+}
+
+/* Establecer la altura inicial de las sublistas a 0 */
+.sidebar .menu-links .nav-link ul {
+    height: 0;
+    overflow: hidden;
+    transition: var(--tran-02);
+}
+
+/* Rotación del icono */
+.rotate {
+    transform: rotate(90deg);
+    transition: var(--tran-02);
+}
+
+
+/* ================ Main ================ */
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+    
+}
+
+/* ====================== Generales ====================== */
+
+/* ====================== DashBoard Inicio ====================== */
+/* =========== Título del DBInicio =========== */
+.main .titulo{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    font-size: 80px;
+    line-height: 60px;
+    text-align: center;
+}
+
+/* =========== Párrafo de la visión de la empresa =========== */
+.main .vision{
+    font-size: 20px;
+    line-height: 30px;
+    padding: 40px 10% 0px 10%;
+    text-align: center;
+}
+
+/* =========== Imagén del bus de DBInico.jsp =========== */
+.main .ImgBusInicio{
+    width: auto;
+    height: 380px;
+    padding: 0px 0px 0px 48%;
+}
+
+/* =========== Label de las tareas pendientes =========== */
+.main .Tareas{
+    position: absolute;
+    padding: 50px 0px 0px 10%;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+/* ====================== DashBoard Administradores ====================== */
+.main--admin{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 275px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+
+.main--content{
+    position: relative;
+    background-color: var(--body-color);
+    width: 88%;
+    padding: 1rem;
+    margin-left: 15%;
+}
+
+.option--header button{
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 12px;
+    background: var(--sidebar-color);
+    color: var(--text-color);
+    font-size: 17px;
+    border-color: var(--sidebar-color);
+    font-family: "Poetsen One", sans-serif;
+}
+
+.option--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--table-color);
+    border-radius: 10px;
+    padding: 20px 3rem;
+    margin-bottom: 1rem;
+}
+
+.search--box{
+    background: var(--body-color);
+    border-radius: 15px;
+    color: var(--sidebar-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 20px;
+}
+
+.search--box input {
+    background-color: transparent;
+    width: 230px;
+    padding: 10px;
+    border: 0;
+    outline: none;
+}
+
+.search--box i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+.search--box i:hover{
+    transform: scale(1.2);
+}
+
+
+.table{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--table-color);
+    border-radius: 10px;
+    padding: 1px 10px;
+    margin-bottom: 1rem;
+    
+}
+
+.general-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+
+.general-table .enunciado{
+    font-size: 16px;
+}
+
+.general-table th,
+.general-table td{
+    padding: 10px 0px;
+    font-size: 12px;
+    max-width: 200px;
+}
+
+
+.general-table tbody tr{
+    border-bottom: 1px solid #DDDDDD;
+    
+}
+
+.modificar,.eliminar{
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+
+.modificar .icona:hover,
+.eliminar .icona:hover{
+    color: var(--sidebar-color);
+}
+
+/* ====== Formulario ====== */
+.crear,
+.guardar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.crear.active,
+.guardar.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.crear .form-popup,
+.guardar .form-popup{
+    background: var(--table-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 615px;
+    text-align: left;
+}
+
+.crear .form-popup-bus,
+.guardar .form-popup-bus{
+    background: var(--table-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    text-align: left;
+}
+
+.crear .form-popup-asi,
+.guardar .form-popup-asi{
+    background: var(--table-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 430px;
+    text-align: left;
+}
+
+.crear .form-popup h2,
+.guardar .form-popup h2,
+.crear .form-popup-bus h2,
+.guardar .form-popup-bus h2,
+.crear .form-popup-asi h2,
+.guardar .form-popup-asi h2{
+    font-size: 20px;
+}
+.crear .form-popup hr,
+.guardar .form-popup hr,
+.crear .form-popup-bus hr,
+.guardar .form-popup-bus hr,
+.crear .form-popup-asi hr,
+.guardar .form-popup-asi hr{
+    padding-bottom: 8px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+.crear .form-popup label,
+.crear .form-popup input,
+.guardar .form-popup label,
+.guardar .form-popup input,
+.crear .form-popup-bus label,
+.crear .form-popup-bus input,
+.guardar .form-popup-bus label,
+.guardar .form-popup-bus input,
+.crear .form-popup-asi label,
+.crear .form-popup-asi input,
+.guardar .form-popup-asi label,
+.guardar .form-popup-asi input{
+    display: block;
+    width: 100%;
+    font-size: 12px;
+}
+
+.crear .form-popup input[type="text"],
+.crear .form-popup input[type="password"],
+.crear .form-popup input[type="date"],
+.crear .form-popup select,
+.guardar .form-popup input[type="text"],
+.guardar .form-popup input[type="password"],
+.guardar .form-popup input[type="date"],
+.guardar .form-popup select,
+.crear .form-popup-bus input[type="text"],
+.crear .form-popup-bus input[type="password"],
+.crear .form-popup-bus input[type="date"],
+.crear .form-popup-bus select,
+.guardar .form-popup-bus input[type="text"],
+.guardar .form-popup-bus input[type="password"],
+.guardar .form-popup-bus input[type="date"],
+.guardar .form-popup-bus select,
+.crear .form-popup-asi input[type="text"],
+.crear .form-popup-asi input[type="password"],
+.crear .form-popup-asi input[type="date"],
+.crear .form-popup-asi select,
+.guardar .form-popup-asi input[type="text"],
+.guardar .form-popup-asi input[type="password"],
+.guardar .form-popup-asi input[type="date"],
+.guardar .form-popup-asi select{
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 10px;
+}
+
+.crear .form-popup button,
+.guardar .form-popup button,
+.crear .form-popup-bus button,
+.guardar .form-popup-bus button,
+.crear .form-popup-asi button,
+.guardar .form-popup-asi button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background: var(--sidebar-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+.crear .form-popup .close-btn,
+.guardar .form-popup .close-btnMo,
+.crear .form-popup-bus .close-btn,
+.guardar .form-popup-bus .close-btnMo,
+.crear .form-popup-asi .close-btn,
+.guardar .form-popup-asi .close-btnMo{
+    background: #888;
+    margin-top: 10px;
+}

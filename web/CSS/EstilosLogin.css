@@ -1,0 +1,114 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Opciones globales ============== */
+*{
+    font-family: "Ubuntu";
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* =========== Div Principal del Login ====================== */
+.login-box{
+    width: 320px;
+    height: 420px;
+    background: #000;
+    border-radius: 20px;
+    color:#fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+/* =========== Logo superior redondo de PeruBus =========== */
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+/* =========== h1 Inicio de sesión ===========*/
+h1{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* ================ Iconos ================ */
+/* =========== Icono de usuario =========== */
+.icon-user{
+    width: auto;
+    height: 17px;
+}
+/* =========== Icono de contraseña =========== */
+.icon-password{
+    width: auto;
+    height: 13px;
+}
+/* ============================================ */
+
+/* =========== Label de Usuario y Contraseña */
+label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+/* =========== Ingreso de datos del usuario y contraseña */
+input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* =========== Botones de acción =========== */
+/* =========== Boton de Iniciar sesión =========== */
+input[class="Login"]{
+    border: none;
+    background: #940d11;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 20px;
+    padding: 15px 85px;
+    text-decoration: none;
+}
+
+/* ==== Cambio de color cuando pasa el cursor de mouse ==== */
+input[class="Login"]:hover{
+    background: #DA1218;
+}
+
+/* =========== Boton de ¿Olvidaste tu contraseña? =========== */
+a[class="Pregunta"]{
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+/* ===== Cambio de color para la pregunta con el cursor del mouse ===== */
+a[class="Pregunta"]:hover{
+    color: #fff;
+}
